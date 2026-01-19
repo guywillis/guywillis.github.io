@@ -15,7 +15,7 @@ export default function PortfolioItem({ title, body, items, itemsAreFullWidth })
           </div>
 
           <div className='portfolio-item__header-body'>
-            <p
+            <div
               className='portfolio-item__header-body-inner'
               dangerouslySetInnerHTML={{__html: body}}
             />

@@ -32,7 +32,7 @@ export default function Home() {
             </div>
 
             <div className='home__header-body'>
-              <p
+              <div
                 className='home__header-body-inner'
                 dangerouslySetInnerHTML={{__html: appJson.body}}
               />
