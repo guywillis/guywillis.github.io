@@ -1,5 +1,6 @@
 import { Link } from 'react-router';
 import appJson from '../App.json';
+import 'boxicons';
 
 export default function Home() {
   return (
@@ -12,7 +13,7 @@ export default function Home() {
             <img
               className='home__header-profile-image'
               src={appJson._img._src}
-              alt={appJson._img.alt}
+              alt={appJson._img.alt || null}
             />
           </div>
 
@@ -45,25 +46,33 @@ export default function Home() {
       <section className='home__container'>
         <div className='home__container-inner'>
 
-          <ul className='home__container-list'>
+          <ul className='home__list'>
             {appJson._items.map(item => (
             !item._isHidden &&
               <li
-                className='home__container-list-item'
+                className='home__list-item'
                 key={item._link}
               >
+                <div className='home__list-item-image-container'>
+                  <img
+                    className='home__list-item-image'
+                    src={item._img._src}
+                    alt={item._img.alt || null}
+                  />
+                </div>
+
                 <div
-                  className='home__container-list-item-title'
+                  className='home__list-item-title'
                   dangerouslySetInnerHTML={{ __html: item.title }}
                 />
 
                 <Link
-                  className='home__container-list-item-image'
+                  className='home__list-item-link'
                   to={`/${item._link}`}
                 >
-                  <img
-                    src={item._img._src}
-                    alt={item._img.alt || null}
+                  <box-icon
+                    type="regular"
+                    name="right-arrow-alt"
                   />
                 </Link>
               </li>

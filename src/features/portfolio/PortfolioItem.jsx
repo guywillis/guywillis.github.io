@@ -1,5 +1,5 @@
 export default function PortfolioItem({ title, body, items, itemsAreFullWidth }) {
-  const listImageClassName = `portfolio-item__container ${itemsAreFullWidth && 'items-are-full-width'}`
+  const listImageClassName = `portfolio-item__container ${itemsAreFullWidth && 'items-are-full-width'}`;
 
   return (
     <div className='portfolio-item'>

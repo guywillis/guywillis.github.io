@@ -1,5 +1,7 @@
 // @use '/src/scss/_variables/_colors' as c;
 @use '/src/styles/_variables/_spacings' as s;
+@use '/src/styles/core/_buttonMixins' as bm;
+@use '/src/styles/core/_fontMixins' as fm;
 @use '/src/styles/core/_layoutMixins' as lm;
 
 .home {
@@ -14,12 +16,16 @@
     @include lm.l-container(s.$device-md);
     @include lm.l-padding(s.$header-padding-ver, s.$header-padding-hoz);
 
-    display: flex;
-    align-items: center;
+    @media (min-width: s.$device-sm) {
+      display: flex;
+      align-items: center;
+    }
   }
 
   &__header-info {
-    padding-inline-start: 1rem;
+    @media (min-width: s.$device-sm) {
+      padding-inline-start: s.$header-padding-hoz;
+    }
   }
 
   &__header-title-inner,
@@ -28,11 +34,15 @@
   }
 
   &__header-profile {
-    width: 40%;
+    @media (min-width: s.$device-sm) {
+      width: 40%;
+    }
   }
 
   &__header-info {
-    width: 60%;
+    @media (min-width: s.$device-sm) {
+      width: 60%;
+    }
   }
 
   &__header-profile-image {
@@ -46,7 +56,7 @@
     @include lm.l-padding(s.$component-padding-ver, s.$component-padding-hoz);
   }
 
-  &__container-list {
+  &__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -55,7 +65,10 @@
     list-style: none;
   }
 
-  &__container-list-item {
+  &__list-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     width: 100%;
     padding-block-end: s.$item-padding;
 
@@ -65,7 +78,7 @@
     }
   }
 
-  &__container-list-item:last-child {
+  &__list-item:last-child {
     padding-block-end: 0;
 
     @media (min-width: s.$device-sm) {
@@ -73,8 +86,28 @@
     }
   }
 
-  &__container-list-item-image {
+  &__list-item-image-container {
+    width: 100%;
+    margin-bottom: s.$item-margin;
+  }
+
+  &__list-item-image {
     display: block;
     border: 1px solid black;
+  }
+
+  &__list-item-title {
+    @include fm.item-title();
+  }
+
+  &__list-item-link {
+    display: inline-flex;
+    margin-inline-start: auto;
+    background-color: red;
+    border-radius: 50%;
+    padding: .5rem;
+
+    @include bm.btn();
+    @include bm.btn-color();
   }
 }

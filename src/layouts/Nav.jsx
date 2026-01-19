@@ -1,12 +1,8 @@
-import { useLocation, Link } from 'react-router';
+import { NavLink } from 'react-router';
 import appJson from '../App.json';
 
-import 'boxicons';
-
 export default function Nav() {
-  const nav = appJson._nav
-
-  // const location = useLocation()
+  const nav = appJson._nav;
 
   return (
     <nav className='nav'>
@@ -19,19 +15,18 @@ export default function Nav() {
           />
         </div>
 
-        {/* {location.pathname !== "/" && */}
-          <Link
-            className='nav__link'
-            to='..'
-            relative='path'
-            aria-label={nav.home}
-          >
-            <box-icon
-              type="regular"
-              name="home-alt-2"
-            />
-          </Link>
-        {/* } */}
+        <NavLink
+          className='nav__link'
+          to='/'
+        >
+          {nav.home}
+        </NavLink>
+        <NavLink
+          className='nav__link'
+          to='/portfolio'
+        >
+          PORT
+        </NavLink>
 
       </div>
     </nav>

@@ -28,3 +28,15 @@ body {
     font-size: f.$nav-title-size;
   }
 }
+
+// item title
+@mixin item-title() {
+  font-size: f.$item-title-size * f.$item-title-mobile-percentage;
+  font-family: f.$item-title-family;
+  font-weight: f.$item-title-weight;
+  line-height: f.$item-title-line-height;
+
+  @media (min-width: s.$device-sm) {
+    font-size: f.$item-title-size;
+  }
+}
