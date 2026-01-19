@@ -1,0 +1,171 @@
+{
+  "title": "Hello!",
+  "body": "<p>I'm Guy, a Frontend Developer based in the South East of the UK who loves everything web.</p><p>Feel free to check out the projects I've worked on and get in touch if you'd like to know more.</p>",
+  "_items": [
+    {
+      "_link": "portfolio/jumps",
+      "_img": {
+        "_src": "./assets/portfolio/thumbJumps.jpg",
+        "alt": "William Hill Logo"
+      }
+    },
+    {
+      "_link": "portfolio/axiata",
+      "_img": {
+        "_src": "./assets/portfolio/thumbAxiata.jpg",
+        "alt": "Axiata Cup Logo"
+      }
+    },
+    {
+      "_link": "portfolio/rsh",
+      "_img": {
+        "_src": "./assets/portfolio/thumbRSH.jpg",
+        "alt": "Red Spotted Hanky Logo"
+      }
+    },
+    {
+      "_link": "portfolio/mbc",
+      "_img": {
+        "_src": "./assets/portfolio/thumbMBC.jpg",
+        "alt": "MBC Pro Sports Logo"
+      }
+    },
+    {
+      "_link": "portfolio/motd",
+      "_img": {
+        "_src": "./assets/portfolio/thumbMOTD.jpg",
+        "alt": "MOTD Magazine Logo"
+      }
+    },
+    {
+      "_link": "portfolio/ca",
+      "_img": {
+        "_src": "./assets/portfolio/thumbCA.jpg",
+        "alt": "Cricket Australia Logo"
+      }
+    }
+  ],
+  "_contact": {
+    "name": "Name",
+    "namePlaceholder": "Joe Bloggs",
+    "email": "Email",
+    "emailPlaceholder": "joe@bloggs.com",
+    "message": "Message",
+    "messagePlaceholder": "Your message here...",
+    "button": "Send"
+  },
+  "_axiata": {
+    "title": "Axiata Cup",
+    "body": "<p>The Axiata Cup Fantasy Badminton game was based on the real results of matches in the 2014 Axiata Cup and produced in two langauges, English and Bahasa Indonesia. The final product was a highly customised version of the standard template to match a very strict set of branding guidelines whilst also featuring a login and 'SmashPoints' integration, where users could earn points that they could redeem against prizes.</p>",
+    "_itemsAreFullWidth": false,
+    "_items": [
+      {
+        "_img": {
+          "_src": "/assets/portfolio/fullAxiata01.jpg",
+          "alt": "Team page screenshot of the English version of the Axiata Cup game site"
+        }
+      },
+      {
+        "_img": {
+          "_src": "/assets/portfolio/fullAxiata02.jpg",
+          "alt": "Team page screenshot of the Bahasa Indonesia version of the Axiata Cup game site"
+        }
+      }
+    ]
+  },
+  "_ca": {
+    "title": "Cricket Australia",
+    "body": "<p>The Streak is a bespoke project for Cricket Australia based on the Big Bash 2014/15 League season. Users have 5 lives over the course of the season and have to select which player, if any, will hit a 6 during each match. Cricket Australia have a very specific brand which had to be matched throughout the game site.</p>",
+    "_itemsAreFullWidth": true,
+    "_items": [
+      {
+        "_img": {
+          "_src": "/assets/portfolio/fullCA01.jpg",
+          "alt": "Home page web preview of the Big Bash Streak game site within a desktop computer"
+        }
+      },
+      {
+        "_img": {
+          "_src": "/assets/portfolio/fullCA02.jpg",
+          "alt": "Team page screenshot of the Big Bash Streak game site"
+        }
+      }
+    ]
+  },
+  "_jumps": {
+    "title": "William Hill 'The Jumps'",
+    "body": "<p>'The Jumps' is a cross-platform online interface available to customers of William Hill who have selected 10 horses from 'The Jumps Easy Slip'. The design of the interface had to be simple and intuitive yet also contain as much detailed information as the user may want access to.</p>",
+    "_itemsAreFullWidth": true,
+    "_items": [
+      {
+        "_img": {
+          "_src": "/assets/portfolio/fullJumps01.jpg",
+          "alt": "Team page web preview of The Jumps within a desktop computer"
+        }
+      },
+      {
+        "_img": {
+          "_src": "/assets/portfolio/fullJumps02.jpg",
+          "alt": "Team page mobile preview of The Jumps as shown in a smartphone"
+        }
+      }
+    ]
+  },
+  "_mbc": {
+    "title": "MBC",
+    "body": "<p>Created for MBC Pro Sports and based on the Saudi Pro League, this project proved to be quite interesting. The immediate challenge was to reverse the entire template product (including the game structure) to read from RTL (right-to-left) in order to support the Arabic language. Any improvements to the efficiency of this reversal would then be filtered back into the template product to make this process easier in the future.</p>",
+    "_itemsAreFullWidth": true,
+    "_items": [
+      {
+        "_img": {
+          "_src": "/assets/portfolio/fullMBC01.jpg",
+          "alt": "Home page web preview of the Arabic version of MBC Pro Sports fantasy game site within a laptop"
+        }
+      },
+      {
+        "_img": {
+          "_src": "/assets/portfolio/fullMBC02.jpg",
+          "alt": "Team page screenshot of the Arabic version of MBC Pro Sports fantasy game site"
+        }
+      }
+    ]
+  },
+  "_motd": {
+    "title": "MOTD Magazine",
+    "body": "<p>Designed for children, MOTD Magazine's Fantasy Premier League game boasts a vibrant colour scheme, a plethora of additional features to promote user engagement and numerous promotional banners to increase magazine sales.</p>",
+    "_itemsAreFullWidth": true,
+    "_items": [
+      {
+        "_img": {
+          "_src": "/assets/portfolio/fullMOTD01.jpg",
+          "alt": "Home page web preview of the MOTD Magazine game site within a desktop computer"
+        }
+      },
+      {
+        "_img": {
+          "_src": "/assets/portfolio/fullMOTD02.jpg",
+          "alt": "Team page mobile preview of the MOTD Magazine game site shown in a smartphone"
+        }
+      }
+    ]
+  },
+  "_rsh": {
+    "title": "Red Spotted Hanky",
+    "body": "<p>Based on the 2014 World Cup, the main objectives of the site were to attract new users whilst also re-engaging current customers by offering high value prizes, and loyalty points for each fantasy point scored. The site was required to stay within the Red Spotted Hanky brand boundaries but feature a Brazilian football theme.</p>",
+    "_itemsAreFullWidth": true,
+    "_items": [
+      {
+        "_img": {
+          "_src": "/assets/portfolio/fullRSH01.jpg",
+          "alt": "Home page web preview of the Red Spotted Hanky World Cup game site within a laptop"
+        }
+      },
+      {
+        "_img": {
+          "_src": "/assets/portfolio/fullRSH02.jpg",
+          "alt": "Team page web preview of the Red Spotted Hanky World Cup game site as shown in a desktop computer"
+        }
+      }
+    ]
+  }
+}

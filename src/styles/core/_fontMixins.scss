@@ -1,0 +1,30 @@
+// @use '/src/scss/_variables/_colors' as c;
+@use '/src/styles/_variables/_fonts' as f;
+@use '/src/styles/_variables/_spacings' as s;
+
+body {
+  font-family: f.$body-family;
+  font-size: f.$body-size;
+  font-weight: f.$body-weight;
+  line-height: f.$body-line-height;
+  color: var(--font-color);
+}
+
+@mixin btn-text() {
+  font-family: f.$btn-family;
+  font-size: f.$btn-size;
+  font-weight: f.$font-weight-regular;
+  line-height: f.$btn-line-height;
+}
+
+// navigation title
+@mixin nav-title() {
+  font-size: f.$nav-title-size * f.$nav-title-mobile-percentage;
+  font-family: f.$nav-title-family;
+  font-weight: f.$nav-title-weight;
+  line-height: f.$nav-title-line-height;
+
+  @media (min-width: s.$device-sm) {
+    font-size: f.$nav-title-size;
+  }
+}

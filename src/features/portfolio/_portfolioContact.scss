@@ -1,0 +1,85 @@
+// @use '/src/scss/_variables/_colors' as c;
+@use '/src/styles/_variables/_spacings' as s;
+@use '/src/styles/core/_buttonMixins' as bm;
+@use '/src/styles/core/_layoutMixins' as lm;
+
+.portfolio-contact {
+  background-color: var(--html-body-color);
+  color: var(--html-body-color-inverted);
+
+  &__inner {
+    @include lm.l-container(s.$device-sm);
+    @include lm.l-padding(s.$footer-padding-ver, s.$footer-padding-hoz);
+  }
+
+  &__form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__form label {
+    display: block;
+    width: 100%;
+  }
+
+  &__name,
+  &__email {
+    width: 100%;
+    padding-block-end: calc(s.$item-padding / 2);
+
+    @media (min-width: s.$device-sm) {
+      width: calc(50% - (s.$item-padding / 2));
+    }
+  }
+
+  &__email {
+    margin-inline-start: auto;
+  }
+
+  &__message {
+    width: 100%;
+  }
+
+  &__name-input,
+  &__email-input,
+  &__message-input,
+  &__input-name,
+  &__input-email,
+  &__input-message {
+    width: 100%;
+    padding: calc(s.$item-padding / 2);
+    border: 0;
+    border-radius: .25rem;
+  }
+
+  &__message-input,
+  &__input-message {
+    min-height: 7rem;
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  &__btn-container {
+    width: 100%;
+    margin-block: s.$btn-margin;
+    text-align: center;
+  }
+
+  &__btn {
+    @include bm.btn;
+    @include bm.btn-color-alt;
+    cursor: pointer;
+  }
+
+  &__status {
+    width: 100%;
+    min-height: 2.5rem;
+    padding: calc(s.$item-padding / 2);
+    text-align: center;
+    color: var(--validation-error);
+  }
+
+  &__status.is-success {
+    color: var(--validation-success);
+  }
+}

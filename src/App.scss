@@ -1,0 +1,23 @@
+// apply normalize
+@use './styles/_normalize/normalize';
+
+// variables
+@use './styles/_variables/_colors';
+
+// set up base styles
+@use './styles/core/_baseStyles';
+@use './styles/core/_accessibility';
+
+// layouts
+@use './styles/layouts/_global';
+@use './styles/layouts/_nav';
+@use './styles/layouts/_footer';
+
+// pages
+@use './styles/pages/_home';
+
+// tenzies
+@use './features/tenzies/_tenzies';
+
+// gallery
+@use './features/portfolio/_portfolio';

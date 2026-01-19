@@ -1,0 +1,51 @@
+// @use '/src/scss/_variables/_colors' as c;
+@use '/src/styles/_variables/_spacings' as s;
+@use '/src/styles/core/_layoutMixins' as lm;
+
+.portfolio-item {
+  background-color: var(--wrapper-color);
+
+  &__header {
+    background-color: var(--header-color);
+    color: var(--header-color-inverted);
+    text-align: center;
+  }
+
+  &__header-inner {
+    @include lm.l-container(s.$device-md);
+    @include lm.l-padding(s.$header-padding-ver, s.$header-padding-hoz);
+  }
+
+  &__heading-title-inner {
+    margin: 0;
+  }
+
+  &__container {
+    @include lm.l-container(s.$device-md);
+    @include lm.l-padding(s.$component-padding-ver, s.$component-padding-hoz);
+  }
+
+  &__container-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    width: 100%;
+    padding: s.$item-padding;
+
+    @media (min-width: s.$device-sm) {
+      width: 50%;
+    }
+  }
+
+  &__container.items-are-full-width &__item {
+    @media (min-width: s.$device-sm) {
+      width: 100%;
+    }
+  }
+}

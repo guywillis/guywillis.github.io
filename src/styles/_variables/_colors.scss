@@ -1,0 +1,110 @@
+// colour definition
+:root {
+  // defaults
+  --black: #000;
+  --white: #fff;
+
+  // backgrounds
+  --white-off: #f2f2f2;
+  // --grey-light: #ddd;
+  // --gery-mid: #a0a0a0;
+  --grey-dark: #222;
+  --blue: #194a93;
+
+  // validation
+  --error: #ff4242;
+  --success: #00c200;
+
+  // abstraction
+  --html-body-color: var(--grey-dark);
+  --html-body-color-inverted: var(--white);
+
+  --wrapper-color: var(--white-off);
+
+  // fonts
+  --font-color: var(--black);
+  --font-color-inverted: var(--white-off);
+
+  // nav
+  --nav-color: var(--grey-dark);
+  --nav-color-inverted: var(--white);
+
+  // header
+  --header-color: var(--blue);
+  --header-color-inverted: var(--white);
+
+  // footer
+  --footer-color: var(--grey-dark);
+  --footer-color-inverted: var(--white);
+
+  // button - filled
+  --primary-btn: var(--grey-dark);
+  --primary-btn-inverted: var(--white);
+  --primary-btn-border: var(--grey-dark);
+
+  --primary-btn-hover: hsl(from var(--primary-btn) h s calc(l - 15));
+  --primary-btn-inverted-hover: var(--primary-btn-inverted);
+  --primary-btn-border-hover: var(--primary-btn-hover);
+
+  --primary-btn-focus: hsl(from var(--primary-btn) h s calc(l - 15));
+  --primary-btn-inverted-focus: var(--primary-btn-inverted);
+  --primary-btn-border-focus: var(--primary-btn-focus);
+
+    // button - filled - inverted
+  --primary-btn-alt: var(--white);
+  --primary-btn-alt-inverted: var(--grey-dark);
+  --primary-btn-alt-border: var(--white);
+
+  --primary-btn-alt-hover: hsl(from var(--primary-btn-alt) h s calc(l - 15));
+  --primary-btn-alt-inverted-hover: var(--primary-btn-alt-inverted);
+  --primary-btn-alt-border-hover: var(--primary-btn-alt-hover);
+
+  --primary-btn-alt-focus: hsl(from var(--primary-btn-alt) h s calc(l - 15));
+  --primary-btn-alt-inverted-focus: var(--primary-btn-alt-inverted);
+  --primary-btn-alt-border-focus: var(--primary-btn-alt-focus);
+
+  --validation-success: var(--success);
+  --validation-error: var(--error);
+
+  // --color-primary: #f00; /* any format you want here */
+  // --color-primary-darker: hsl(from var(--color-primary) h s calc(l - 5));
+  // --color-primary-darkest: hsl(from var(--color-primary) h s calc(l - 10));
+}
+
+// abstraction
+// $html-body-color: var(--grey-dark);
+// $html-body-color-inverted: var(--white);
+
+// $wrapper-color: var(--white-off);
+
+// fonts
+// $font-color: var(--black);
+// $font-color-inverted: var(--white-off);
+
+// nav
+// $nav-color: var(--grey-dark);
+// $nav-color-inverted: var(--white);
+
+// header
+// $header-color: var(--blue);
+// $header-color-inverted: var(--white);
+
+// footer
+// $footer-color: var(--grey-dark);
+// $footer-color-inverted: var(--white);
+
+// buttons
+// $btn-color: var(--grey-dark);
+// $btn-color-inverted: var(--white);
+// $btn-color-border: var(--white);
+
+// $btn-color-hover: var(--white);
+// $btn-color-inverted-hover: var(--grey-dark);
+// $btn-color-border-hover: var(--grey-dark);
+
+// $btn-color-focus: var(--white);
+// $btn-color-inverted-focus: var(--grey-dark);
+// $btn-color-border-focus: var(--grey-dark);
+
+// $validation-success: var(--success);
+// $validation-error: var(--error);

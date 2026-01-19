@@ -1,0 +1,31 @@
+// font import
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+// font definitions
+$title-family: 'Open Sans', Helvetica, Arial, sans-serif;
+$body-family: 'Open Sans', Helvetica, Arial, sans-serif;
+$btn-family: 'Open Sans', Helvetica, Arial, sans-serif;
+
+// font weights
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+
+// line height
+$title-line-height: 1.2;
+$body-line-height: 1.5;
+$btn-line-height: 1.5;
+
+// globals
+$body-size: 1rem;
+$body-weight: $font-weight-regular;
+
+$btn-size: $body-size;
+$btn-weight: $font-weight-regular;
+
+// nav
+$nav-title-size: 1.5rem;
+$nav-title-family: $title-family;
+$nav-title-weight: $font-weight-light;
+$nav-title-line-height: $title-line-height;
+$nav-title-mobile-percentage: .75;

@@ -1,0 +1,31 @@
+// sizes
+$device-xs: 0rem;
+$device-sm: 40rem; // 640px
+$device-md: 60rem; // 960px
+$device-lg: 75rem; // 1200px
+$device-xl: 90rem; // 1440px
+$device-max: 120rem; // 1920px
+
+// container spacing
+$nav-padding-ver: .5rem;
+$nav-padding-hoz: .5rem;
+
+$header-padding-ver: 1rem;
+$header-padding-hoz: 1rem;
+
+$component-padding-ver: 1rem;
+$component-padding-hoz: 1rem;
+
+$footer-padding-ver: 1rem;
+$footer-padding-hoz: 1rem;
+
+// item spacing
+$item-margin: 1rem;
+$item-padding: 1rem;
+
+// button spacing
+$btn-margin: .5rem;
+$btn-padding-ver: .5rem;
+$btn-padding-hoz: 2rem;
+$btn-outline-width: 1px;
+$btn-outline-offset: 3px;

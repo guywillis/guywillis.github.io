@@ -1,0 +1,63 @@
+// @use '/src/scss/_variables/_colors' as c;
+@use '/src/styles/_variables/_spacings' as s;
+@use '/src/styles/_variables/_transitions' as t;
+@use '/src/styles/core/_fontMixins' as fm;
+
+.btn-text {
+  @include fm.btn-text;
+  padding: s.$btn-padding-ver s.$btn-padding-hoz;
+}
+
+@mixin btn() {
+  border: 0;
+  border-radius: .5rem;
+
+  &:focus-visible {
+    outline-width: s.$btn-outline-width;
+    outline-offset: s.$btn-outline-offset;
+  }
+
+  .no-touch:not(.no-csstransitions) &:hover {
+    transition:
+      background-color t.$duration ease-in,
+      color t.$duration ease-in;
+  }
+}
+
+@mixin btn-color() {
+  background-color: var(--primary-btn);
+  color: var(--primary-btn-inverted);
+  box-shadow: 0 0 0 1px var(--primary-btn-border) inset;
+
+  .no-touch &:hover {
+    background-color: var(--primary-btn-hover);
+    color: var(--primary-btn-inverted-hover);
+    box-shadow: 0 0 0 1px var(--primary-btn-border-hover) inset;
+  }
+
+  &:focus-visible {
+    background-color: var(--primary-btn-focus);
+    color: var(--primary-btn-inverted-focus);
+    box-shadow: 0 0 0 1px var(--primary-btn-border-focus) inset;
+    outline-color: var(--primary-btn-focus);
+  }
+}
+
+@mixin btn-color-alt() {
+  background-color: var(--primary-btn-alt);
+  color: var(--primary-btn-alt-inverted);
+  box-shadow: 0 0 0 1px var(--primary-btn-alt-border) inset;
+
+  .no-touch &:hover {
+    background-color: var(--primary-btn-alt-hover);
+    color: var(--primary-btn-alt-inverted-hover);
+    box-shadow: 0 0 0 1px var(--primary-btn-alt-border-hover) inset;
+  }
+
+  &:focus-visible {
+    background-color: var(--primary-btn-alt-focus);
+    color: var(--primary-btn-alt-inverted-focus);
+    box-shadow: 0 0 0 1px var(--primary-btn-alt-border-focus) inset;
+    outline-color: var(--primary-btn-alt-focus);
+  }
+}

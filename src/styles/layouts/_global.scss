@@ -1,0 +1,10 @@
+// @use '/src/scss/_variables/_colors' as c;
+
+body {
+  background-color: var(--html-body-color);
+}
+
+.main {
+  background-color: var(--wrapper-color);
+  padding-top: 3.5rem;
+}

@@ -1,0 +1,41 @@
+{
+  "title": "Guy Willis",
+  "subtitle": "Frontend Developer",
+  "body": "A Frontend Developer with over 13 years of experience, passionate about accessibility and user-centric design. Known for a keen eye for detail and a drive to discover efficient, forward-thinking solutions.",
+  "_img": {
+    "_src": "./assets/profile.jpg",
+    "alt": ""
+  },
+  "_accessibility": {
+    "pageEnd": "End of page."
+  },
+  "_nav": {
+    "home": "Home",
+    "_img": {
+      "_src": "assets/logo.svg",
+      "alt": ""
+    }
+  },
+  "_footer": {
+    "body": "<p>Copyright © 2015-{0} Guy Willis. All Rights Reserved.</p><p>Designed and developed by Guy Willis.</p><p>Any of the trademarks, service marks, collective marks, design rights or similar rights that are mentioned, used or cited above are the property of their respective owners.</p>"
+  },
+  "_items": [
+    {
+      "_isHidden": true,
+      "title": "Tenzies",
+      "_link": "tenzies",
+      "_img": {
+        "_src": "./assets/portfolio.png",
+        "alt": ""
+      }
+    },
+    {
+      "title": "Old portfolio",
+      "_link": "portfolio",
+      "_img": {
+        "_src": "./assets/portfolio.png",
+        "alt": ""
+      }
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+// @use '/src/scss/_variables/_colors' as c;
+@use '/src/styles/_variables/_fonts' as f;
+@use '/src/styles/_variables/_spacings' as s;
+@use '/src/styles/core/_layoutMixins' as lm;
+
+.footer {
+  background-color: var(--footer-color);
+  color: var(--footer-color-inverted);
+
+  &__inner {
+    @include lm.l-container(s.$device-sm);
+    @include lm.l-padding(s.$footer-padding-ver, s.$footer-padding-hoz);
+  }
+
+  &__body {
+    font-size: f.$body-size * .75;
+    text-align: center;
+  }
+}
