@@ -10,7 +10,16 @@
     "pageEnd": "End of page."
   },
   "_nav": {
-    "home": "Home",
+    "_items": [
+      {
+        "title": "Home",
+        "_url": "/"
+      },
+      {
+        "title": "Portfolio",
+        "_url": "/portfolio"
+      }
+    ],
     "_img": {
       "_src": "assets/logo.svg",
       "alt": ""

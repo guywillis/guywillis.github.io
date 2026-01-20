@@ -15,18 +15,14 @@ export default function Nav() {
           />
         </div>
 
-        <NavLink
-          className='nav__link'
-          to='/'
-        >
-          {nav.home}
-        </NavLink>
-        <NavLink
-          className='nav__link'
-          to='/portfolio'
-        >
-          PORT
-        </NavLink>
+        {nav._items.map(item => (
+          <NavLink
+            to={item._url}
+            className='nav__link'
+          >
+            {item.title}
+          </NavLink>
+        ))}
 
       </div>
     </nav>
