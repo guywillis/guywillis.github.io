@@ -17,7 +17,8 @@ export default function Nav() {
 
         {nav._items.map(item => (
           <NavLink
-            to={item._url}
+            key={item._url}
+            to={`/${item._url}`}
             className='nav__link'
           >
             {item.title}

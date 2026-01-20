@@ -13,11 +13,11 @@
     "_items": [
       {
         "title": "Home",
-        "_url": "/"
+        "_url": ""
       },
       {
         "title": "Portfolio",
-        "_url": "/portfolio"
+        "_url": "portfolio"
       }
     ],
     "_img": {
