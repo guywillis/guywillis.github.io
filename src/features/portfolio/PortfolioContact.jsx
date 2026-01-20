@@ -21,7 +21,7 @@ export default function Contact() {
       .sendForm('service_6szbs1b', 'template_dfjxg1o', form.current, {
         publicKey: 'A9yqqNrNGnBWcsHLj',
       })
-      .then((result) => {
+      .then(() => {
         // console.log(result.text);
         setStatusMessage('Message sent');
         contactStatus.className = 'portfolio-contact__status is-success';
@@ -32,7 +32,7 @@ export default function Contact() {
           contactInputEmail.value = '';
           contactInputMessage.value = '';
         }, 5000);
-      }, (error) => {
+      }, () => {
         // console.log(error.text);
         setStatusMessage('Failed to send message, please try again');
         contactStatus.className = 'portfolio-contact__status is-error';
