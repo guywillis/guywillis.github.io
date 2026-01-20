@@ -12,6 +12,8 @@ export default function Nav() {
           <img
             className='nav__logo-image'
             src={nav._img._src}
+            alt={nav._img.alt || null}
+            aria-hidden={!nav._img.alt}
           />
         </div>
 

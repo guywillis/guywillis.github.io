@@ -44,6 +44,7 @@ export default function Portfolio() {
                     <img
                       src={item._img._src}
                       alt={item._img.alt}
+                      aria-hidden={!item._img.alt}
                     />
                   </Link>
                 </li>

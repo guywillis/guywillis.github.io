@@ -35,6 +35,7 @@ export default function PortfolioItem({ title, body, items, itemsAreFullWidth })
                 className='portfolio-item__item-image'
                 src={item._img._src}
                 alt={item._img.alt}
+                aria-hidden={!item._img.alt}
               />
             </div>
           ))}

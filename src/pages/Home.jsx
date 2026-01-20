@@ -14,6 +14,7 @@ export default function Home() {
               className='home__header-profile-image'
               src={appJson._img._src}
               alt={appJson._img.alt || null}
+              aria-hidden={!appJson._img.alt}
             />
           </div>
 
@@ -58,6 +59,7 @@ export default function Home() {
                     className='home__list-item-image'
                     src={item._img._src}
                     alt={item._img.alt || null}
+                    aria-hidden={!item._img.alt}
                   />
                 </div>
 

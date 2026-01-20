@@ -10,6 +10,10 @@
     "pageEnd": "End of page."
   },
   "_nav": {
+    "_img": {
+      "_src": "assets/logo.svg",
+      "alt": "Guy Willis Logo"
+    },
     "_items": [
       {
         "title": "Home",
@@ -19,11 +23,7 @@
         "title": "Portfolio",
         "_url": "portfolio"
       }
-    ],
-    "_img": {
-      "_src": "assets/logo.svg",
-      "alt": ""
-    }
+    ]
   },
   "_footer": {
     "body": "<p>Copyright © 2015-{0} Guy Willis. All Rights Reserved.</p><p>Designed and developed by Guy Willis.</p><p>Any of the trademarks, service marks, collective marks, design rights or similar rights that are mentioned, used or cited above are the property of their respective owners.</p>"
