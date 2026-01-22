@@ -54,6 +54,7 @@ export default function Home() {
                 className='home__list-item'
                 key={item._link}
               >
+                {item._img._src &&
                 <div className='home__list-item-image-container'>
                   <img
                     className='home__list-item-image'
@@ -62,6 +63,7 @@ export default function Home() {
                     aria-hidden={!item._img.alt}
                   />
                 </div>
+                }
 
                 <div
                   className='home__list-item-title'
