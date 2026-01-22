@@ -1,5 +1,5 @@
-import GalleryItem from './PortfolioItem.jsx'
-import portfolioJson from './portfolio.json'
+import GalleryItem from './PortfolioItem.jsx';
+import portfolioJson from './portfolio.json';
 
 export default function Axiata() {
   const content = portfolioJson._axiata;
