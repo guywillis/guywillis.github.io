@@ -30,7 +30,7 @@
   fill: var(--primary-btn-inverted);
   box-shadow: 0 0 0 1px var(--primary-btn-border) inset;
 
-  .no-touch &:hover {
+  .no-touch &:not(.is-disabled):hover {
     background-color: var(--primary-btn-hover);
     color: var(--primary-btn-inverted-hover);
     fill: var(--primary-btn-inverted-hover);
@@ -43,6 +43,11 @@
     fill: var(--primary-btn-inverted-focus);
     box-shadow: 0 0 0 1px var(--primary-btn-border-focus) inset;
     outline-color: var(--primary-btn-focus);
+  }
+
+  &.is-disabled {
+    cursor: not-allowed;
+    opacity: .3;
   }
 }
 
