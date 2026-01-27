@@ -1,10 +1,11 @@
 // @use '/src/scss/_variables/_colors' as c;
+@use '/src/styles/_variables/_spacings' as s;
 
 body {
   background-color: var(--html-body-color);
 }
 
 .main {
+  padding-top: s.$nav-height;
   background-color: var(--wrapper-color);
-  padding-top: 3.5rem;
 }
