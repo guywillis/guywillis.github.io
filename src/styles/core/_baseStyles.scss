@@ -34,6 +34,6 @@ button {
 
 // Add a pointer to button tags that are not disabled or locked
 // --------------------------------------------------
-button {
+button:not(.is-disabled) {
   cursor: pointer;
 }
