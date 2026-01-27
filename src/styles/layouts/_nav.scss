@@ -17,7 +17,7 @@
     @include lm.l-container(s.$device-md);
     @include lm.l-padding(s.$nav-padding-ver, s.$nav-padding-hoz);
     display: flex;
-    align-items: center;
+    align-items: flex-end;
   }
 
   &__logo {
@@ -27,9 +27,11 @@
 
   &__link {
     @include fm.nav-title;
+    display: inline-flex;
     margin: calc(s.$nav-margin-block / 2) calc(s.$nav-margin-inline / 2);
     padding: calc(s.$nav-padding-ver / 2) calc(s.$nav-padding-hoz / 2);
     color: inherit;
+    fill: var(--nav-color-inverted);
     text-decoration: none;
     box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0);
 

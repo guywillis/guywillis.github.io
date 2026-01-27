@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router';
 import appJson from '../App.json';
+import 'boxicons';
 
 export default function Nav() {
   const nav = appJson._nav;
@@ -23,7 +24,13 @@ export default function Nav() {
             to={`/${item._url}`}
             className='nav__link'
           >
-            {item.title}
+            {item._icon._isEnabled &&
+              <box-icon
+                type={item._icon._style}
+                name={item._icon._src}
+              />
+            }
+            {!item._icon._isEnabled && item.title}
           </NavLink>
         ))}
 

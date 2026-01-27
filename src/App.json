@@ -17,11 +17,26 @@
     "_items": [
       {
         "title": "Home",
-        "_url": ""
+        "_url": "",
+        "_icon": {
+          "_isEnabled": true,
+          "_style": "regular",
+          "_src": "home-alt-2"
+        }
       },
       {
-        "title": "Portfolio",
-        "_url": "portfolio"
+        "title": "Tenzies",
+        "_url": "tenzies",
+        "_icon": {
+          "_isEnabled": false
+        }
+      },
+      {
+        "title": "Old portfolio",
+        "_url": "portfolio",
+        "_icon": {
+          "_isEnabled": false
+        }
       }
     ]
   },
