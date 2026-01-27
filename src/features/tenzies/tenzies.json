@@ -1,7 +1,10 @@
 {
-  "_tenzies": {
-    "title": "Tenzies",
-    "body": "Placeholder",
-    "buttonLabel": "New game"
-  }
+  "title": "Tenzies",
+  "body": "<p>Roll the dice until they are all the same. Select each die to hold it at its current value between rolls.</p>",
+  "rollDiceButtonLabel": "Roll Dice",
+  "newGameButtonLabel": "New Game",
+  "status": "Status: ",
+  "won": "Congratulations! You have won.",
+  "notWon": "",
+  "invalid": "Not all the dice match. Release a die and reroll or select New Game."
 }

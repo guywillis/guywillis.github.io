@@ -1,29 +1,60 @@
-@use './_dice';
-
-// @use '/src/scss/_variables/_colors' as c;
 @use '/src/styles/_variables/_spacings' as s;
 @use '/src/styles/core/_layoutMixins' as lm;
 @use '/src/styles/core/_buttonMixins' as bm;
 
+@use './_die';
+
 .tenzies {
+  position: relative;
+  overflow: hidden;
+
+  &__header {
+    background-color: var(--header-color);
+    color: var(--header-color-inverted);
+    text-align: center;
+  }
+
+  &__header-inner {
+    @include lm.l-container(s.$device-md);
+    @include lm.l-padding(s.$header-padding-ver, s.$header-padding-hoz);
+  }
+
+  &__header-title-inner {
+    margin: 0;
+  }
+
   &__container {
+    display: flex;
+    align-items: center;
+    min-height: 30vh;
     background-color: var(--wrapper-color);
   }
 
   &__container-inner {
     @include lm.l-container(s.$device-md);
     @include lm.l-padding(s.$component-padding-ver, s.$component-padding-hoz);
-
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
+  &__status {
+    text-align: center;
+  }
 
+  &__dice-container {
+    max-width: 20rem;
+    text-align: center;
+  }
+
+  &__button-container {
+    margin-top: s.$item-margin;
+  }
 
   &__button {
     @include bm.btn;
     @include bm.btn-color;
-    cursor: pointer;
+    min-width: 10rem;
+    margin-inline: s.$btn-margin
   }
 }

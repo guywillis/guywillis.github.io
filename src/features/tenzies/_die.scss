@@ -1,0 +1,42 @@
+@use '/src/styles/_variables/_fonts' as f;
+@use '/src/styles/_variables/_spacings' as s;
+@use '/src/styles/core/_buttonMixins' as bm;
+
+.tenzies-dice {
+  height: s.$icon-size + (s.$icon-padding * 2);
+  width: s.$icon-size + (s.$icon-padding * 2);
+  margin: s.$btn-margin;
+  background-color: #e7e7e7;
+  color: #000;
+  box-shadow:
+    0 0 0 1px var(--black),
+    0 2px var(--white) inset,
+    0 -2px #bbb inset,
+    2px 0 #d7d7d7 inset,
+    -2px 0 #d7d7d7 inset;
+  border-radius: .25rem;
+
+  .no-touch &:not(.is-held):hover {
+    box-shadow:
+      0 0 0 2px var(--black),
+      0 2px var(--white) inset,
+      0 -2px #bbb inset,
+      2px 0 #d7d7d7 inset,
+      -2px 0 #d7d7d7 inset;
+  }
+
+  &.is-held {
+    font-weight: f.$font-weight-bold;
+    box-shadow:
+      0 0 0 2px var(--black),
+      0 2px var(--white) inset,
+      0 -2px #bbb inset,
+      2px 0 #d7d7d7 inset,
+      -2px 0 #d7d7d7 inset;
+  }
+
+  &.is-disabled {
+    cursor: not-allowed;
+    opacity: .3;
+  }
+}

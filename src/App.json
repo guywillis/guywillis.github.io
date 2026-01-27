@@ -30,19 +30,20 @@
   },
   "_items": [
     {
-      "_isHidden": true,
+      "_isHidden": false,
       "title": "Tenzies",
       "_link": "tenzies",
       "_img": {
-        "_src": "./assets/portfolio.png",
+        "_src": "",
         "alt": ""
       }
     },
     {
+      "_isHidden": false,
       "title": "Old portfolio",
       "_link": "portfolio",
       "_img": {
-        "_src": "./assets/portfolio.png",
+        "_src": "",
         "alt": ""
       }
     }
