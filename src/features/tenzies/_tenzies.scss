@@ -31,24 +31,35 @@
   }
 
   &__container-inner {
-    @include lm.l-container(s.$device-md);
+    @include lm.l-container(s.$device-sm);
     @include lm.l-padding(s.$component-padding-ver, s.$component-padding-hoz);
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
   }
 
   &__status {
+    width: 100%;
+    text-align: center;
+  }
+
+  &__roll-counter,
+  &__streak {
+    width: 50%;
     text-align: center;
   }
 
   &__dice-container {
+    width: 100%;
     max-width: 20rem;
     text-align: center;
   }
 
   &__button-container {
+    width: 100%;
     margin-top: s.$item-margin;
+    text-align: center;
   }
 
   &__button {

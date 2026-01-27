@@ -7,10 +7,11 @@ import tenzies from './tenzies.json';
 export default function Tenzies() {
   // ! To do list
   // * Visual updates
-  // * Roll tracker
   // * Accessibility
 
   const [items, setItems] = useState(() => generateDice());
+  const [rollCount, setRollCount] = useState(0);
+  const [streakCount, setStreakCount] = useState(0);
   const buttonRef = useRef(null);
   const [width, height] = useDeviceSize();
 
@@ -19,15 +20,21 @@ export default function Tenzies() {
     items.every(item => item.value === items[0].value);
 
   useEffect(() => {
-    if (gameWon) buttonRef.current.focus();
-  }, [gameWon])
+    if (gameWon) {
+      buttonRef.current.focus();
+      setStreakCount(prevStreakCount => {
+        if ((rollCount < prevStreakCount) || (prevStreakCount === 0)) return rollCount;
+        return prevStreakCount;
+      })
+    }
+  }, [gameWon, rollCount]);
 
   function generateDice() {
     return Array.from({ length: 10 }, (item, index) => ({
       id: index,
       value: Math.ceil(Math.random() * 6),
       isHeld: false,
-    }))
+    }));
   }
 
   // Click functions
@@ -37,10 +44,10 @@ export default function Tenzies() {
       item.id === id
         ? {
             ...item,
-            isHeld: !item.isHeld
+            isHeld: !item.isHeld,
           }
         : item
-    ))
+    ));
   }
 
   function rollDiceClick() {
@@ -51,15 +58,17 @@ export default function Tenzies() {
           ...item,
           value: Math.ceil(Math.random() * 6),
         }
-    )))
+    )));
+    setRollCount(prevCount => prevCount + 1);
   }
 
   function newGameClick() {
     setItems(prev => prev.map(item => ({
       ...item,
       value: Math.ceil(Math.random() * 6),
-      isHeld: false
-    })))
+      isHeld: false,
+    })));
+    setRollCount(0);
   }
 
   // Class vars
@@ -108,6 +117,18 @@ export default function Tenzies() {
                       : tenzies.notWon
                   }
                 </p>
+              </div>
+            </div>
+
+            <div className='tenzies__roll-counter'>
+              <div className='tenzies__roll-counter-inner'>
+                <p>{tenzies.rollCounter} {rollCount}</p>
+              </div>
+            </div>
+
+            <div className='tenzies__streak'>
+              <div className='tenzies__streak-inner'>
+                <p>{tenzies.streakCounter} {streakCount}</p>
               </div>
             </div>
 

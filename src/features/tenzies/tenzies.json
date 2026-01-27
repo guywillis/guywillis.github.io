@@ -6,5 +6,7 @@
   "status": "Status: ",
   "won": "Congratulations! You have won.",
   "notWon": "",
-  "invalid": "Not all the dice match. Release a die and reroll or select New Game."
+  "invalid": "Not all the dice match. Release a die and reroll or select New Game.",
+  "rollCounter": "Roll counter: ",
+  "streakCounter": "Lowest streak: "
 }
