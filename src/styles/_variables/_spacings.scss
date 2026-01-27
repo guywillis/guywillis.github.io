@@ -6,7 +6,13 @@ $device-lg: 75rem; // 1200px
 $device-xl: 90rem; // 1440px
 $device-max: 120rem; // 1920px
 
+// icon
+$icon-size: 1.5rem;
+
 // container spacing
+$nav-margin-block: .5rem;
+$nav-margin-inline: .5rem;
+
 $nav-padding-ver: .5rem;
 $nav-padding-hoz: .5rem;
 
@@ -19,6 +25,10 @@ $component-padding-hoz: 1rem;
 $footer-padding-ver: 1rem;
 $footer-padding-hoz: 1rem;
 
+// icon spacing
+$icon-margin: .5rem;
+$icon-padding: .5rem;
+
 // item spacing
 $item-margin: 1rem;
 $item-padding: 1rem;
@@ -29,3 +39,6 @@ $btn-padding-ver: .5rem;
 $btn-padding-hoz: 2rem;
 $btn-outline-width: 1px;
 $btn-outline-offset: 3px;
+
+// nav
+$nav-height: calc($icon-size + ($icon-padding * 2) + ($nav-padding-ver * 2));
