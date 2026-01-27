@@ -10,7 +10,7 @@
 
 @mixin btn() {
   border: 0;
-  border-radius: .5rem;
+  border-radius: s.$btn-border-radius;
 
   &:focus-visible {
     outline-width: s.$btn-outline-width;
@@ -21,6 +21,11 @@
     transition:
       background-color t.$duration ease-in,
       color t.$duration ease-in;
+  }
+
+  &.is-disabled {
+    cursor: not-allowed;
+    opacity: .3;
   }
 }
 
@@ -43,11 +48,6 @@
     fill: var(--primary-btn-inverted-focus);
     box-shadow: 0 0 0 1px var(--primary-btn-border-focus) inset;
     outline-color: var(--primary-btn-focus);
-  }
-
-  &.is-disabled {
-    cursor: not-allowed;
-    opacity: .3;
   }
 }
 
