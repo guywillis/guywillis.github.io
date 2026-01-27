@@ -1,5 +1,4 @@
-import { useState, useEffect } from 'react';
-// import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import useDeviceSize from '../../hooks/useDeviceSize.jsx'
 import Confetti from 'react-confetti'
 import Die from './Die.jsx';
@@ -12,8 +11,16 @@ export default function Tenzies() {
   // * Accessibility
 
   const [items, setItems] = useState(() => generateDice());
+  const buttonRef = useRef(null);
   const [width, height] = useDeviceSize();
-  // const btnRole = useRef(null);
+
+  const gameWon =
+    items.every(item => item.isHeld === true) &&
+    items.every(item => item.value === items[0].value);
+
+  useEffect(() => {
+    if (gameWon) buttonRef.current.focus();
+  }, [gameWon])
 
   function generateDice() {
     return Array.from({ length: 10 }, (item, index) => ({
@@ -23,22 +30,9 @@ export default function Tenzies() {
     }))
   }
 
-  console.log('render');
-
-  const gameWon =
-    items.every(item => item.isHeld === true) &&
-    items.every(item => item.value === items[0].value);
-
-  useEffect(() => {
-    console.log('use effect');
-    if (gameWon) console.log('use effect game won');
-    // if (gameWon) btnRole.current.focus();
-  }, [gameWon])
-
   // Click functions
   function dieClick(id) {
     if (gameWon) return;
-    console.log('die click');
     setItems(prev => prev.map(item =>
       item.id === id
         ? {
@@ -50,7 +44,6 @@ export default function Tenzies() {
   }
 
   function rollDiceClick() {
-    console.log('roll dice');
     setItems(prev => prev.map(item => (
       item.isHeld
         ? item
@@ -62,7 +55,6 @@ export default function Tenzies() {
   }
 
   function newGameClick() {
-    console.log('new game');
     setItems(prev => prev.map(item => ({
       ...item,
       value: Math.ceil(Math.random() * 6),
@@ -146,6 +138,7 @@ export default function Tenzies() {
                 />
 
                 <button
+                  ref={buttonRef}
                   className='btn-text tenzies__button'
                   dangerouslySetInnerHTML={{ __html: tenzies.newGameButtonLabel }}
                   onClick={() => newGameClick()}
