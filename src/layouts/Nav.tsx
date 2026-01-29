@@ -1,6 +1,5 @@
 import { NavLink } from 'react-router';
 import appJson from '../App.json';
-import 'boxicons';
 
 export default function Nav() {
   const nav = appJson._nav;
@@ -13,7 +12,7 @@ export default function Nav() {
           <img
             className='nav__logo-image'
             src={nav._img._src}
-            alt={nav._img.alt || null}
+            alt={nav._img.alt || undefined}
             aria-hidden={!nav._img.alt}
           />
         </div>
@@ -23,15 +22,8 @@ export default function Nav() {
             key={item._url}
             to={`/${item._url}`}
             className='nav__link'
-          >
-            {item._icon._isEnabled &&
-              <box-icon
-                type={item._icon._style}
-                name={item._icon._src}
-              />
-            }
-            {!item._icon._isEnabled && item.title}
-          </NavLink>
+            dangerouslySetInnerHTML={{ __html: item._icon ? item._icon : item.title }}
+          />
         ))}
 
       </div>

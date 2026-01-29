@@ -12,7 +12,9 @@
     @include lm.l-padding(s.$footer-padding-ver, s.$footer-padding-hoz);
   }
 
-  &__body {
+  &__body,
+  &__copyright,
+  &__disclaimer {
     font-size: f.$body-size * .75;
     text-align: center;
   }

@@ -1,4 +1,4 @@
-import GalleryItem from './PortfolioItem.jsx';
+import PortfolioItem from './PortfolioItem.tsx';
 import portfolioJson from './portfolio.json';
 
 export default function RSH() {
@@ -6,7 +6,7 @@ export default function RSH() {
   const items = content._items;
 
   return (
-    <GalleryItem
+    <PortfolioItem
       title={content.title}
       body={content.body}
       items={items}

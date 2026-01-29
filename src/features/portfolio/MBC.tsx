@@ -1,12 +1,12 @@
-import GalleryItem from './PortfolioItem.jsx';
+import PortfolioItem from './PortfolioItem.tsx';
 import portfolioJson from './portfolio.json';
 
-export default function Axiata() {
-  const content = portfolioJson._axiata;
+export default function MBC() {
+  const content = portfolioJson._mbc;
   const items = content._items;
 
   return (
-    <GalleryItem
+    <PortfolioItem
       title={content.title}
       body={content.body}
       items={items}

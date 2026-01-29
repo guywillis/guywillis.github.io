@@ -5,20 +5,23 @@ import portfolioJson from './portfolio.json';
 export default function Contact() {
   const content = portfolioJson._contact;
 
-  const form = useRef();
-
   const [statusMessage, setStatusMessage] = useState('');
+  const formRef = useRef<HTMLFormElement>(null);
 
-  const sendEmail = (e) => {
+  const sendEmail = (e: React.SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const contactStatus = document.querySelector('.portfolio-contact__status');
-    const contactInputName = document.getElementById('user-name');
-    const contactInputEmail = document.getElementById('user-email');
-    const contactInputMessage = document.getElementById('user-message');
+    const currentForm = formRef.current;
+    // this prevents sending emails if there is no form.
+    if (currentForm == null) return;
+
+    const contactStatus = document.querySelector('.portfolio-contact__status') as HTMLDivElement;
+    const contactInputName = document.getElementById('user-name') as HTMLInputElement;
+    const contactInputEmail = document.getElementById('user-email') as HTMLInputElement;
+    const contactInputMessage = document.getElementById('user-message') as HTMLTextAreaElement;
 
     emailjs
-      .sendForm('service_6szbs1b', 'template_dfjxg1o', form.current, {
+      .sendForm('service_6szbs1b', 'template_dfjxg1o', currentForm, {
         publicKey: 'A9yqqNrNGnBWcsHLj',
       })
       .then(() => {
@@ -53,7 +56,7 @@ export default function Contact() {
         <form
           id='portfolio-contact-form'
           className='portfolio-contact__form'
-          ref={form}
+          ref={formRef}
           onSubmit={sendEmail}
         >
 
@@ -92,10 +95,10 @@ export default function Contact() {
             <textarea
               id='user-message'
               className='portfolio-contact__message-input'
-              rows='5'
+              rows={5}
               name='message'
               placeholder={content.messagePlaceholder}
-              maxLength='1500'
+              maxLength={1500}
               required
             />
           </div>

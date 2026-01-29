@@ -1,6 +1,5 @@
 import { Link } from 'react-router';
 import appJson from '../App.json';
-import 'boxicons';
 
 export default function Home() {
   return (
@@ -13,7 +12,7 @@ export default function Home() {
             <img
               className='home__header-profile-image'
               src={appJson._img._src}
-              alt={appJson._img.alt || null}
+              alt={appJson._img.alt || undefined}
               aria-hidden={!appJson._img.alt}
             />
           </div>
@@ -59,7 +58,7 @@ export default function Home() {
                   <img
                     className='home__list-item-image'
                     src={item._img._src}
-                    alt={item._img.alt || null}
+                    alt={item._img.alt || undefined}
                     aria-hidden={!item._img.alt}
                   />
                 </div>
@@ -74,10 +73,7 @@ export default function Home() {
                   className='home__list-item-link'
                   to={`/${item._link}`}
                 >
-                  <box-icon
-                    type="regular"
-                    name="right-arrow-alt"
-                  />
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M6 13h6v4l6-5-6-5v4H6z"/></svg>
                 </Link>
               </li>
             ))}

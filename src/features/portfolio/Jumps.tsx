@@ -1,16 +1,16 @@
-import GalleryItem from './PortfolioItem.jsx';
+import PortfolioItem from './PortfolioItem.tsx';
 import portfolioJson from './portfolio.json';
 
-export default function CA() {
-  const content = portfolioJson._ca;
+export default function Jumps() {
+  const content = portfolioJson._jumps;
   const items = content._items;
 
   return (
-    <GalleryItem
+    <PortfolioItem
       title={content.title}
       body={content.body}
       items={items}
       itemsAreFullWidth={content._itemsAreFullWidth}
     />
-  )
+  );
 }

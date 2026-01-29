@@ -1,4 +1,18 @@
-export default function PortfolioItem({ title, body, items, itemsAreFullWidth }) {
+type PortFolioItemType = {
+  title: string;
+  body: string;
+  items: PortFolioItemItemsType[];
+  itemsAreFullWidth: boolean;
+}
+
+type PortFolioItemItemsType = {
+  _img: {
+    _src: string;
+    alt: string;
+  }
+}
+
+export default function PortfolioItem({ title, body, items, itemsAreFullWidth }: PortFolioItemType) {
   const listImageClassName = `portfolio-item__container ${itemsAreFullWidth && 'items-are-full-width'}`;
 
   return (

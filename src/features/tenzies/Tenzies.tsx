@@ -1,44 +1,50 @@
-import { useState, useEffect, useRef } from 'react';
-import useDeviceSize from '../../hooks/useDeviceSize.jsx'
-import Confetti from 'react-confetti'
-import Die from './Die.jsx';
+import { useState, useEffect, useEffectEvent, useRef } from 'react';
+import Fireworks from "react-canvas-confetti/dist/presets/fireworks";
+import Die from './Die.tsx';
 import tenzies from './tenzies.json';
 
 export default function Tenzies() {
   // ! To do list
   // * Visual updates
   // * Accessibility
-
-  const [items, setItems] = useState(() => generateDice());
-  const [rollCount, setRollCount] = useState(0);
-  const [streakCount, setStreakCount] = useState(0);
-  const buttonRef = useRef(null);
-  const [width, height] = useDeviceSize();
-
-  const gameWon =
-    items.every(item => item.isHeld === true) &&
-    items.every(item => item.value === items[0].value);
-
-  useEffect(() => {
-    if (gameWon) {
-      buttonRef.current.focus();
-      setStreakCount(prevStreakCount => {
-        if ((rollCount < prevStreakCount) || (prevStreakCount === 0)) return rollCount;
-        return prevStreakCount;
-      })
-    }
-  }, [gameWon, rollCount]);
+  // * Store streak
 
   function generateDice() {
-    return Array.from({ length: 10 }, (item, index) => ({
+    return Array.from({ length: 10 }, (_, index) => ({
       id: index,
       value: Math.ceil(Math.random() * 6),
       isHeld: false,
     }));
   }
 
+  const [items, setItems] = useState(() => generateDice());
+  const [rollCount, setRollCount] = useState(0);
+  const [streakCount, setStreakCount] = useState(0);
+  const buttonRef = useRef<HTMLButtonElement>(null);
+
+  const gameWon =
+    items.every(item => item.isHeld === true) &&
+    items.every(item => item.value === items[0].value);
+
+  const updateStreakCount = useEffectEvent(() => {
+    setStreakCount(prevStreakCount => {
+      if ((rollCount < prevStreakCount) || (prevStreakCount === 0)) return rollCount;
+      return prevStreakCount;
+    })
+  })
+
+  useEffect(() => {
+    if (gameWon) {
+      const buttonEl = buttonRef.current;
+      if (buttonEl == null) return;
+      buttonEl.focus();
+
+      updateStreakCount();
+    }
+  }, [gameWon, rollCount]);
+
   // Click functions
-  function dieClick(id) {
+  function dieClick(id: number) {
     if (gameWon) return;
     setItems(prev => prev.map(item =>
       item.id === id
@@ -78,11 +84,9 @@ export default function Tenzies() {
     <div className='tenzies'>
       <div className='tenzies__inner'>
 
-        {gameWon && <Confetti
-          width={width}
-          height={height}
-          recycle={false}
-        />}
+        {gameWon &&
+          <Fireworks autorun={{ speed: .75 }} />
+        }
 
         <header className='tenzies__header'>
           <div className='tenzies__header-inner'>
@@ -152,7 +156,7 @@ export default function Tenzies() {
               <div className='tenzies__button-container-inner'>
 
                 <button
-                  disabled={gameWon || null}
+                  disabled={gameWon || undefined}
                   className={rollDiceButtonClassName}
                   dangerouslySetInnerHTML={{ __html: tenzies.rollDiceButtonLabel }}
                   onClick={() => rollDiceClick()}

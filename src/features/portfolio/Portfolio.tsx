@@ -1,5 +1,5 @@
 import { Link } from 'react-router';
-import PortfolioContact from './PortfolioContact.jsx';
+import PortfolioContact from './PortfolioContact.tsx';
 import portfolioJson from './portfolio.json';
 
 export default function Portfolio() {
@@ -43,7 +43,7 @@ export default function Portfolio() {
                   >
                     <img
                       src={item._img._src}
-                      alt={item._img.alt}
+                      alt={item._img.alt || undefined}
                       aria-hidden={!item._img.alt}
                     />
                   </Link>
