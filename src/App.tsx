@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router';
+import { Routes, Route } from 'react-router';
 
 import Layout from './layouts/Layout.tsx';
 import Home from './pages/Home.tsx';
@@ -17,25 +17,23 @@ import './App.scss';
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<Layout />}>
-          <Route index element={<Home />} />
+    <Routes>
+      <Route path='/' element={<Layout />}>
+        <Route index element={<Home />} />
 
-          <Route path='tenzies' element={<Tenzies />} />
+        <Route path='tenzies' element={<Tenzies />} />
 
-          <Route path='portfolio'>
-            <Route index element={<Portfolio />} />
-            <Route path='jumps' element={<Jumps />} />
-            <Route path='axiata' element={<Axiata />} />
-            <Route path='rsh' element={<RSH />} />
-            <Route path='mbc' element={<MBC />} />
-            <Route path='motd' element={<MOTD />} />
-            <Route path='ca' element={<CA />} />
-          </Route>
-
+        <Route path='portfolio'>
+          <Route index element={<Portfolio />} />
+          <Route path='jumps' element={<Jumps />} />
+          <Route path='axiata' element={<Axiata />} />
+          <Route path='rsh' element={<RSH />} />
+          <Route path='mbc' element={<MBC />} />
+          <Route path='motd' element={<MOTD />} />
+          <Route path='ca' element={<CA />} />
         </Route>
-      </Routes>
-    </BrowserRouter>
+
+      </Route>
+    </Routes>
   );
 }

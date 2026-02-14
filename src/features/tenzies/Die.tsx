@@ -3,9 +3,10 @@ type DieType = {
   isHeld: boolean;
   onClick: () => void;
   isDisabled: boolean;
+  dataTestId: string;
 }
 
-export default function Die({ value, isHeld, onClick, isDisabled }: DieType) {
+export default function Die({ value, isHeld, onClick, isDisabled, dataTestId }: DieType) {
   const dieClassName =
     `tenzies-dice${isHeld ? ' is-held' : ''}${isDisabled ? ' is-disabled' : ''}`
 
@@ -15,6 +16,7 @@ export default function Die({ value, isHeld, onClick, isDisabled }: DieType) {
       dangerouslySetInnerHTML={{ __html: value }}
       onClick={onClick}
       disabled={isDisabled}
+      data-testid={dataTestId}
     />
   )
 }

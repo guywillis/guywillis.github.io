@@ -3,7 +3,10 @@ import appJson from '../App.json';
 
 export default function Home() {
   return (
-    <div className='home'>
+    <div
+      className='home'
+      data-testid="home-page"
+    >
 
       <header className='home__header'>
         <div className='home__header-inner'>
@@ -22,6 +25,7 @@ export default function Home() {
               <h1
                 className='home__header-title-inner'
                 dangerouslySetInnerHTML={{__html: appJson.title}}
+                data-testid='home-heading'
               />
             </div>
 
@@ -36,6 +40,7 @@ export default function Home() {
               <div
                 className='home__header-body-inner'
                 dangerouslySetInnerHTML={{__html: appJson.body}}
+                data-testid='home-body'
               />
             </div>
           </div>

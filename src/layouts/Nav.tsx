@@ -22,7 +22,7 @@ export default function Nav() {
             key={item._url}
             to={`/${item._url}`}
             className='nav__link'
-            dangerouslySetInnerHTML={{ __html: item._icon ? item._icon : item.title }}
+            dangerouslySetInnerHTML={{ __html: item.title }}
           />
         ))}
 

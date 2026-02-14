@@ -81,7 +81,10 @@ export default function Tenzies() {
   const rollDiceButtonClassName = `btn-text tenzies__button${gameWon ? ' is-disabled' : ''}`;
 
   return (
-    <div className='tenzies'>
+    <div
+      className='tenzies'
+      data-testid="tenzies-page"
+    >
       <div className='tenzies__inner'>
 
         {gameWon &&
@@ -95,6 +98,7 @@ export default function Tenzies() {
               <h1
                 className='tenzies__header-title-inner'
                 dangerouslySetInnerHTML={{ __html: tenzies.title }}
+                data-testid='tenzies-heading'
               />
             </div>
 
@@ -102,6 +106,7 @@ export default function Tenzies() {
               <div
                 className='tenzies__header-body-inner'
                 dangerouslySetInnerHTML={{ __html: tenzies.body }}
+                data-testid='tenzies-body'
               />
             </div>
 
@@ -146,6 +151,7 @@ export default function Tenzies() {
                       isHeld={item.isHeld}
                       onClick={() => dieClick(item.id)}
                       isDisabled={gameWon}
+                      dataTestId={`die-${item.id}`}
                     />
                   )
                 })}
@@ -160,6 +166,7 @@ export default function Tenzies() {
                   className={rollDiceButtonClassName}
                   dangerouslySetInnerHTML={{ __html: tenzies.rollDiceButtonLabel }}
                   onClick={() => rollDiceClick()}
+                  data-testid="roll-button"
                 />
 
                 <button

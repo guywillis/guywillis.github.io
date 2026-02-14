@@ -8,7 +8,10 @@ export default function Layout() {
     <>
       <Nav />
 
-      <main className='main'>
+      <main
+        className='main'
+        data-testid='main-content'
+      >
         <Outlet />
       </main>
 

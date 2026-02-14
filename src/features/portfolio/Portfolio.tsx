@@ -5,7 +5,10 @@ import portfolioJson from './portfolio.json';
 export default function Portfolio() {
   return (
     <>
-      <div className='portfolio'>
+      <div
+        className='portfolio'
+        data-testid='portfolio-page'
+      >
         <div className='portfolio__inner'>
 
           <header className='portfolio__header'>
@@ -15,6 +18,7 @@ export default function Portfolio() {
                 <h1
                   className='portfolio__header-title-inner'
                   dangerouslySetInnerHTML={{__html: portfolioJson.title}}
+                  data-testid='portfolio-heading'
                 />
               </div>
 
@@ -22,6 +26,7 @@ export default function Portfolio() {
                 <div
                   className='portfolio__header-body-inner'
                   dangerouslySetInnerHTML={{__html: portfolioJson.body}}
+                  data-testid='portfolio-body'
                 />
               </div>
 

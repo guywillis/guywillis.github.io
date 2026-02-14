@@ -7,6 +7,7 @@ export default function MOTD() {
 
   return (
     <PortfolioItem
+      id={content._id}
       title={content.title}
       body={content.body}
       items={items}

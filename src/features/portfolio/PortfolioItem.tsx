@@ -1,4 +1,5 @@
 type PortFolioItemType = {
+  id: string;
   title: string;
   body: string;
   items: PortFolioItemItemsType[];
@@ -12,11 +13,14 @@ type PortFolioItemItemsType = {
   }
 }
 
-export default function PortfolioItem({ title, body, items, itemsAreFullWidth }: PortFolioItemType) {
+export default function PortfolioItem({ id, title, body, items, itemsAreFullWidth }: PortFolioItemType) {
   const listImageClassName = `portfolio-item__container ${itemsAreFullWidth && 'items-are-full-width'}`;
 
   return (
-    <div className='portfolio-item'>
+    <div
+      className='portfolio-item'
+      data-testid={`${id}-page`}
+    >
 
       <header className='portfolio-item__header'>
         <div className='portfolio-item__header-inner'>
@@ -25,6 +29,7 @@ export default function PortfolioItem({ title, body, items, itemsAreFullWidth }:
             <h1
               className='portfolio-item__title-inner'
               dangerouslySetInnerHTML={{__html: title}}
+              data-testid={`${id}-heading`}
             />
           </div>
 
@@ -32,6 +37,7 @@ export default function PortfolioItem({ title, body, items, itemsAreFullWidth }:
             <div
               className='portfolio-item__header-body-inner'
               dangerouslySetInnerHTML={{__html: body}}
+              data-testid={`${id}-body`}
             />
           </div>
 
