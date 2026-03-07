@@ -20,11 +20,15 @@
         "_url": ""
       },
       {
+        "title": "Text Reveal",
+        "_url": "textreveal"
+      },
+      {
         "title": "Tenzies",
         "_url": "tenzies"
       },
       {
-        "title": "Old portfolio",
+        "title": "Old Portfolio",
         "_url": "portfolio"
       }
     ]
@@ -37,6 +41,15 @@
   "_items": [
     {
       "_isHidden": false,
+      "title": "Text Reveal",
+      "_link": "textreveal",
+      "_img": {
+        "_src": "",
+        "alt": ""
+      }
+    },
+    {
+      "_isHidden": false,
       "title": "Tenzies",
       "_link": "tenzies",
       "_img": {
@@ -46,7 +59,7 @@
     },
     {
       "_isHidden": false,
-      "title": "Old portfolio",
+      "title": "Old Portfolio",
       "_link": "portfolio",
       "_img": {
         "_src": "",

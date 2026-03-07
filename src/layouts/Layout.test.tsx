@@ -10,9 +10,10 @@ describe('Layout', () => {
       </MemoryRouter>
     )
 
-    expect(screen.getByRole('link', { name: /home/i })).toBeInTheDocument()
-    expect(screen.getByRole('link', { name: /portfolio/i })).toBeInTheDocument()
-    expect(screen.getByRole('link', { name: /tenzies/i })).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: /Home/i })).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: /Old Portfolio/i })).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: /Tenzies/i })).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: /Text Reveal/i })).toBeInTheDocument()
   })
 
   it('renders main content outlet', () => {

@@ -17,6 +17,7 @@
     @include lm.l-container(s.$device-md);
     @include lm.l-padding(s.$nav-padding-ver, s.$nav-padding-hoz);
     display: flex;
+    flex-wrap: wrap;
     align-items: flex-end;
   }
 

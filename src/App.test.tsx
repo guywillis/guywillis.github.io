@@ -29,6 +29,12 @@ describe('App routing', () => {
     expect(screen.getByTestId('portfolio-heading')).toBeInTheDocument()
   })
 
+  it('renders Text Reveal index page at /textreveal', () => {
+    renderWithRoute('/textreveal')
+    expect(screen.getByTestId('textreveal-page')).toBeInTheDocument()
+    expect(screen.getByTestId('textreveal-heading')).toBeInTheDocument()
+  })
+
   it('renders all Portfolio projects', () => {
     const projects = [
       { route: '/portfolio/jumps', testId: 'jumps-page' },

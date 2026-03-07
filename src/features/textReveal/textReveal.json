@@ -1,0 +1,103 @@
+{
+  "title": "Text Reveal",
+  "body": "<p>An accessible interactive component that displays text and an optional image as buttons in a grid layout. Selecting a button triggers a modal which contains a title, body context and an optional image.</p>",
+  "_itemsPerRowDesktop": 3,
+  "_itemsPerRowTablet": 2,
+  "_itemsPerRowMobile": 1,
+  "_itemGap": 1.5,
+  "_itemImageHeight": 12,
+  "_hoverStyle": "icon",
+  "popupCloseButtonLabel": "Close",
+
+  "itemHorizontalAlignment": "flex-start",
+  "itemTitleVerticalAlignment": "below",
+  "itemTitleHorizontalAlignment": "start",
+  "iconPosition": "center",
+  "itemImageZoomScale": 1.1,
+  "itemImageZoomDuration": 0.2,
+  "itemImageZoomEasing": "ease-in",
+  "popupTitleHeadingLevel": "h2",
+
+  "_items": [
+    {
+      "title": "Item title one",
+      "_img": {
+        "_src": "https://placecats.com/300/200",
+        "alt": ""
+      },
+      "_popup": {
+        "title": "Popup title one",
+        "body": "<p>Popup body one, no image.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam commodo tincidunt elit nec dictum. Nunc sed pellentesque tortor. Nam nulla nunc, aliquet quis ornare sed, feugiat vel libero. Sed vehicula mi vel ultrices rutrum. Morbi non gravida libero. Curabitur venenatis a tortor at ullamcorper. Maecenas iaculis justo augue, ac imperdiet nulla commodo ac. Phasellus rutrum, nibh non vestibulum auctor, elit sem bibendum sem, posuere posuere mi nunc nec enim. In consectetur vestibulum erat ac lacinia. Duis non odio sed lacus tempor condimentum. Nunc gravida, felis at fringilla vestibulum, enim felis convallis ligula, ut tincidunt dui quam vitae libero. Mauris pulvinar, elit a sollicitudin rutrum, urna odio sollicitudin quam, id pretium enim ipsum eget justo. Sed facilisis euismod scelerisque. Donec vestibulum sapien purus, sit amet scelerisque erat accumsan sed. Donec ultrices orci sit amet velit dapibus pulvinar.</p>",
+        "_img": {
+          "_src": "",
+          "alt": ""
+        },
+        "imagePlacement": "right"
+      }
+    },
+    {
+      "title": "Item title two",
+      "_img": {
+        "_src": "https://placecats.com/400/250",
+        "alt": ""
+      },
+      "_popup": {
+        "title": "Popup title two",
+        "body": "<p>Popup body two, image right.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam commodo tincidunt elit nec dictum. Nunc sed pellentesque tortor. Nam nulla nunc, aliquet quis ornare sed, feugiat vel libero. Sed vehicula mi vel ultrices rutrum. Morbi non gravida libero. Curabitur venenatis a tortor at ullamcorper. Maecenas iaculis justo augue, ac imperdiet nulla commodo ac. Phasellus rutrum, nibh non vestibulum auctor, elit sem bibendum sem, posuere posuere mi nunc nec enim. In consectetur vestibulum erat ac lacinia. Duis non odio sed lacus tempor condimentum. Nunc gravida, felis at fringilla vestibulum, enim felis convallis ligula, ut tincidunt dui quam vitae libero. Mauris pulvinar, elit a sollicitudin rutrum, urna odio sollicitudin quam, id pretium enim ipsum eget justo. Sed facilisis euismod scelerisque. Donec vestibulum sapien purus, sit amet scelerisque erat accumsan sed. Donec ultrices orci sit amet velit dapibus pulvinar.</p>",
+        "_img": {
+          "_src": "https://placecats.com/400/250",
+          "alt": ""
+        },
+        "imagePlacement": "right"
+      }
+    },
+    {
+      "title": "Item title three is a very long title that should go over multiple lines so here's a bit more text",
+      "_img": {
+        "_src": "https://placecats.com/500/300",
+        "alt": ""
+      },
+      "_popup": {
+        "title": "Popup title three",
+        "body": "<p>Popup body three, image left with alt text.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam commodo tincidunt elit nec dictum. Nunc sed pellentesque tortor. Nam nulla nunc, aliquet quis ornare sed, feugiat vel libero. Sed vehicula mi vel ultrices rutrum. Morbi non gravida libero. Curabitur venenatis a tortor at ullamcorper. Maecenas iaculis justo augue, ac imperdiet nulla commodo ac. Phasellus rutrum, nibh non vestibulum auctor, elit sem bibendum sem, posuere posuere mi nunc nec enim. In consectetur vestibulum erat ac lacinia. Duis non odio sed lacus tempor condimentum. Nunc gravida, felis at fringilla vestibulum, enim felis convallis ligula, ut tincidunt dui quam vitae libero. Mauris pulvinar, elit a sollicitudin rutrum, urna odio sollicitudin quam, id pretium enim ipsum eget justo. Sed facilisis euismod scelerisque. Donec vestibulum sapien purus, sit amet scelerisque erat accumsan sed. Donec ultrices orci sit amet velit dapibus pulvinar.</p>",
+        "_img": {
+          "_src": "https://placecats.com/500/300",
+          "alt": "Example alt text"
+        },
+        "imagePlacement": "left"
+      }
+    },
+    {
+      "title": "Item title four",
+      "_img": {
+        "_src": "https://placecats.com/600/350",
+        "alt": ""
+      },
+      "_popup": {
+        "title": "Popup title four",
+        "body": "<p>Popup body four, image bottom.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam commodo tincidunt elit nec dictum. Nunc sed pellentesque tortor. Nam nulla nunc, aliquet quis ornare sed, feugiat vel libero. Sed vehicula mi vel ultrices rutrum. Morbi non gravida libero. Curabitur venenatis a tortor at ullamcorper. Maecenas iaculis justo augue, ac imperdiet nulla commodo ac. Phasellus rutrum, nibh non vestibulum auctor, elit sem bibendum sem, posuere posuere mi nunc nec enim. In consectetur vestibulum erat ac lacinia. Duis non odio sed lacus tempor condimentum. Nunc gravida, felis at fringilla vestibulum, enim felis convallis ligula, ut tincidunt dui quam vitae libero. Mauris pulvinar, elit a sollicitudin rutrum, urna odio sollicitudin quam, id pretium enim ipsum eget justo. Sed facilisis euismod scelerisque. Donec vestibulum sapien purus, sit amet scelerisque erat accumsan sed. Donec ultrices orci sit amet velit dapibus pulvinar.</p>",
+        "_img": {
+          "_src": "https://placecats.com/600/350",
+          "alt": ""
+        },
+        "imagePlacement": "bottom"
+      }
+    },
+    {
+      "title": "Item title five",
+      "_img": {
+        "_src": "https://placecats.com/700/400",
+        "alt": ""
+      },
+      "_popup": {
+        "title": "Popup title five",
+        "body": "<p>Popup body five, image top.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam commodo tincidunt elit nec dictum. Nunc sed pellentesque tortor. Nam nulla nunc, aliquet quis ornare sed, feugiat vel libero. Sed vehicula mi vel ultrices rutrum. Morbi non gravida libero. Curabitur venenatis a tortor at ullamcorper. Maecenas iaculis justo augue, ac imperdiet nulla commodo ac. Phasellus rutrum, nibh non vestibulum auctor, elit sem bibendum sem, posuere posuere mi nunc nec enim. In consectetur vestibulum erat ac lacinia. Duis non odio sed lacus tempor condimentum. Nunc gravida, felis at fringilla vestibulum, enim felis convallis ligula, ut tincidunt dui quam vitae libero. Mauris pulvinar, elit a sollicitudin rutrum, urna odio sollicitudin quam, id pretium enim ipsum eget justo. Sed facilisis euismod scelerisque. Donec vestibulum sapien purus, sit amet scelerisque erat accumsan sed. Donec ultrices orci sit amet velit dapibus pulvinar.</p>",
+        "_img": {
+          "_src": "https://placecats.com/700/400",
+          "alt": ""
+        },
+        "imagePlacement": "top"
+      }
+    }
+  ]
+}
